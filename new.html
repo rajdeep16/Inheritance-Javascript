@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>OOPS</title>
+            </head>
+            <body>
+                <div align="center">
+                        <h1>Welcome To OOPS</h1>
+                        <script>
+                            function student(firstname, lastname) {
+                                this.Firstname = firstname || "undefined";
+                                this.Lastname = lastname  || "undefined";
+                            
+                            };
+                            student.prototype.getFullname = function(){
+                                return this.Firstname + " " + this.Lastname;
+                            }
+                            function players (firstname, lastname, teamname, level){
+                                student.call(this, firstname, lastname);
+                                
+                                this.Teamname = teamname || "undefined";
+                                this.level = level || "0";
+                            }
+                            Players.prototype = new Student();
+                        Players.prototype.constructor = Players;
+            var playerone = new Players("Ahmad","Ahsan","emerald", 3);
+            alert(playerone.getFullname());
+            alert(playerone instanceof Players);
+                                    alert(playerone instanceof
+                                     Student);
+                        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </body>
+                </html>
+                
